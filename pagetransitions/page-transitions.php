@@ -1,7 +1,7 @@
 <?php
 function set_jcr_page_transition($num=4,$rand="random"){
 	//******************************
-		$number_of_transitions=4;
+		$number_of_transitions=6;
 	//******************************
 	if($rand==="strict"){
 		return "jcr_transition_set".strval($num);
