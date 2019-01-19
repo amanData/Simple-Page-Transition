@@ -1,0 +1,61 @@
+﻿Ce dossier permet d'inclure simplement des transitions entre les pages de votre site.
+
+0/ placer le dossier 'pagetransitions' dans votre dossier projet.
+
+
+
+1/ inclusion du php : 
+	
+	include("./pagetransitions/page-transitions.php");
+
+
+
+2/ inclusion du CSS:
+		
+<!--        Page Transitions-->
+	
+	<link rel="stylesheet" href="./pagetransitions/page-transitions.css">
+
+
+
+3/ inclusion de jQuery:
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+4/ Inclusion du JS:
+	<script type="text/javascript" src="./pagetransitions/page-transitions.js"></script>
+	
+
+
+5/ dans le php de la page AVANT le debut du HTML:
+	
+	//--PAGE TRANSITIONS
+	
+	/**********************/
+	
+	//$jcr_page_transition=set_jcr_page_transition(4,"strict");  --> pour imposer une transition numérotée particuliere
+		$jcr_page_transition=set_jcr_page_transition();  --> pour profiter du choix aleatoire d'une transition
+
+
+
+Voila c'est tout!
+
+
+
+NOTA: Si vous créez de nouveaux effets de transition dans 'page-transistions.css', il faut alors obligatoirement modifier
+la valeur de la variable '$number_of_transitions' dans page-transitions.php:
+
+
+
+	function set_jcr_page_transition($num=4,$rand="random"){
+	
+	//******************************
+		
+	$number_of_transitions=4;  <--------------------------- affecter le nombre total de transitions contenu dans page-transitions.css
+		//******************************
+	
+	if($rand==="strict"){
+		
+	return "jcr_transition_set".strval($num);
+
+			...
