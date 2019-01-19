@@ -43,6 +43,30 @@ body.jcr_transition_set4{
 body.jcr_transition_start4{
 	opacity: 1;
 	transition-duration: 1.5s ;
-	/*transition-timing-function: cubic-bezier(.17,.67,.83,.67);*/
+}
+/* ************************* */
+
+body.jcr_transition_set5{
+	opacity: 0;
+	transform: translateY(-600px) scale(0);
+}
+
+body.jcr_transition_start5{
+	opacity: 1;
+	transform: translateY(0) scale(1);
+	transition-duration: 1.5s ;
+}
+/* ************************* */
+
+body.jcr_transition_set6{
+	opacity: 0;
+	transform: scale(0);
+}
+
+body.jcr_transition_start6{
+	opacity: 1;
+	transform: scale(1);
+	transition-duration: 1s ;
+	transition-timing-function: cubic-bezier(.37,.42,1,1.43);
 }
 /* ************************* */
